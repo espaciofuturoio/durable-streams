@@ -1,7 +1,7 @@
 {
   "name": "@durable-streams/state",
   "description": "State change event protocol for Durable Streams",
-  "version": "0.3.2",
+  "version": "0.3.2-tsdb1.1",
   "author": "Durable Stream contributors",
   "license": "Apache-2.0",
   "repository": {
@@ -63,7 +63,7 @@
     "@standard-schema/spec": "^1.0.0"
   },
   "peerDependencies": {
-    "@tanstack/db": ">=0.6.0 <1.0.0"
+    "@tanstack/db": "^1.0.0-rc.0"
   },
   "peerDependenciesMeta": {
     "@tanstack/db": {
@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@durable-streams/server": "workspace:*",
-    "@tanstack/db": "0.6.0",
+    "@tanstack/db": "1.0.0-rc.1.5",
     "@tanstack/intent": "latest",
     "tsdown": "^0.9.0"
   },

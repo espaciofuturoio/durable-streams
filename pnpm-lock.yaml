@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@tanstack/db': 0.6.0
+  '@tanstack/db': 1.0.0-rc.1.5
 
 importers:
 
@@ -709,8 +709,8 @@ importers:
         specifier: workspace:*
         version: link:../server
       '@tanstack/db':
-        specifier: 0.6.0
-        version: 0.6.0(typescript@5.9.3)
+        specifier: 1.0.0-rc.1.5
+        version: 1.0.0-rc.1.5(typescript@5.9.3)
       '@tanstack/intent':
         specifier: latest
         version: 0.3.6
@@ -2926,13 +2926,13 @@ packages:
     engines: {node: '>=18'}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
-  '@tanstack/db-ivm@0.1.18':
-    resolution: {integrity: sha512-+pZJiRKdoKRM5Epq9T7otD9ZJl82pRFauo7LKuJGrarjVKQ7r+QQlPe3kGdN9LEKSnuNGIWjX9OOY4M8kH4eLw==}
+  '@tanstack/db-ivm@1.0.0-rc.1.3':
+    resolution: {integrity: sha512-4LhRE/6nypOURscUzRyjqffaANVBK8TDv/011cLz79NMxNpZuNgjzwV3s9Z+Rb1d4je+ooRBfPt8hPmGp6dPMw==}
     peerDependencies:
       typescript: '>=4.7'
 
-  '@tanstack/db@0.6.0':
-    resolution: {integrity: sha512-WlTtRYLdWpNAuH9tLV4Q3XdAiSjyxpofpLAJaEcq5ZKoIZJdJPEYRRE2iMgRfq0W0E2lhtdvER/rHdJYfwsNOA==}
+  '@tanstack/db@1.0.0-rc.1.5':
+    resolution: {integrity: sha512-Cpbrc7e1ZcM5j+l/hltVB4IuA6P2i1Py7WRqUsbb0Whof/eylpEfJzx0wgw/2PiOF+s3wJlIXArmghe/zjZR/g==}
     peerDependencies:
       typescript: '>=4.7'
 
@@ -2962,9 +2962,9 @@ packages:
     peerDependencies:
       '@tanstack/ai': ^0.40.0
 
-  '@tanstack/pacer-lite@0.2.1':
-    resolution: {integrity: sha512-3PouiFjR4B6x1c969/Pl4ZIJleof1M0n6fNX8NRiC9Sqv1g06CVDlEaXUR4212ycGFyfq4q+t8Gi37Xy+z34iQ==}
-    engines: {node: '>=18'}
+  '@tanstack/pacer-lite@0.3.0':
+    resolution: {integrity: sha512-+YeHKWX5Zd1Irga2smwAolGtzOcf8VVYhM2QI5XEA5TN58iKKufTjhvrbTCEgLLglR1ynHMGVT/l4m5PkwOdaw==}
+    engines: {node: '>=20'}
 
   '@tanstack/publish-config@0.2.2':
     resolution: {integrity: sha512-hTW2rLeZLBMmpwVzWmUJ5L50hPlf4Ea74rZtecbT6qQYCT16JEAbryfHm1u07KIICI2vEArsm2YguckjODqx0w==}
@@ -4513,8 +4513,8 @@ packages:
     resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
     engines: {node: '>=0.4.x'}
 
-  fractional-indexing@3.2.0:
-    resolution: {integrity: sha512-PcOxmqwYCW7O2ovKRU8OoQQj2yqTfEB/yeTYk4gPid6dN5ODRfU1hXd9tTVZzax/0NkO7AxpHykvZnT1aYp/BQ==}
+  fractional-indexing@3.4.0:
+    resolution: {integrity: sha512-8J3glhz2rrpKG6KmI7wmJo3zH1VjeOpN+vTJSw1fOyO+Viqq3zX6/5NGh6oaZB2qIAYdOYuu5Dz9xp4faOO0Pg==}
     engines: {node: ^14.13.1 || >=16.0.0}
 
   fs-extra@7.0.1:
@@ -5805,9 +5805,6 @@ packages:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
     peerDependencies:
       solid-js: ^1.3
-
-  sorted-btree@1.8.1:
-    resolution: {integrity: sha512-395+XIP+wqNn3USkFSrNz7G3Ss/MXlZEqesxvzCRFwL14h6e8LukDHdLBePn5pwbm5OQ9vGu8mDyz2lLDIqamQ==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -8680,17 +8677,16 @@ snapshots:
       - typescript
       - vite
 
-  '@tanstack/db-ivm@0.1.18(typescript@5.9.3)':
+  '@tanstack/db-ivm@1.0.0-rc.1.3(typescript@5.9.3)':
     dependencies:
-      fractional-indexing: 3.2.0
-      sorted-btree: 1.8.1
+      fractional-indexing: 3.4.0
       typescript: 5.9.3
 
-  '@tanstack/db@0.6.0(typescript@5.9.3)':
+  '@tanstack/db@1.0.0-rc.1.5(typescript@5.9.3)':
     dependencies:
       '@standard-schema/spec': 1.1.0
-      '@tanstack/db-ivm': 0.1.18(typescript@5.9.3)
-      '@tanstack/pacer-lite': 0.2.1
+      '@tanstack/db-ivm': 1.0.0-rc.1.3(typescript@5.9.3)
+      '@tanstack/pacer-lite': 0.3.0
       typescript: 5.9.3
 
   '@tanstack/devtools-event-client@0.4.3': {}
@@ -8735,7 +8731,7 @@ snapshots:
       - ws
       - zod
 
-  '@tanstack/pacer-lite@0.2.1': {}
+  '@tanstack/pacer-lite@0.3.0': {}
 
   '@tanstack/publish-config@0.2.2':
     dependencies:
@@ -8748,7 +8744,7 @@ snapshots:
 
   '@tanstack/react-db@0.1.92(react@19.2.3)(typescript@5.9.3)':
     dependencies:
-      '@tanstack/db': 0.6.0(typescript@5.9.3)
+      '@tanstack/db': 1.0.0-rc.1.5(typescript@5.9.3)
       react: 19.2.3
       use-sync-external-store: 1.6.0(react@19.2.3)
     transitivePeerDependencies:
@@ -9047,7 +9043,7 @@ snapshots:
   '@tanstack/solid-db@0.2.28(solid-js@1.9.10)(typescript@5.9.3)':
     dependencies:
       '@solid-primitives/map': 0.7.2(solid-js@1.9.10)
-      '@tanstack/db': 0.6.0(typescript@5.9.3)
+      '@tanstack/db': 1.0.0-rc.1.5(typescript@5.9.3)
       solid-js: 1.9.10
     transitivePeerDependencies:
       - typescript
@@ -10662,7 +10658,7 @@ snapshots:
 
   format@0.2.2: {}
 
-  fractional-indexing@3.2.0: {}
+  fractional-indexing@3.4.0: {}
 
   fs-extra@7.0.1:
     dependencies:
@@ -12049,8 +12045,6 @@ snapshots:
       solid-js: 1.9.10
     transitivePeerDependencies:
       - supports-color
-
-  sorted-btree@1.8.1: {}
 
   source-map-js@1.2.1: {}
 

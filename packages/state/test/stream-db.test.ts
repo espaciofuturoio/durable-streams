@@ -2092,7 +2092,7 @@ describe(`Stream DB Actions`, () => {
 
     // Call action that will fail in mutationFn and expect it to throw
     const tx = db.actions.addUser(`ERROR`)
-    await expect(tx.isPersisted.promise).rejects.toThrow(`mutationFn error`)
+    await expect(tx.when(`settled`)).rejects.toThrow(`mutationFn error`)
 
     db.close()
   })

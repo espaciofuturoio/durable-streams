@@ -58,7 +58,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@tanstack/db": "0.6.0"
+      "@tanstack/db": "1.0.0-rc.1.5"
     }
   }
 }
