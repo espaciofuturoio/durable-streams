@@ -619,13 +619,16 @@ func (h *Handler) handleSSE(w http.ResponseWriter, r *http.Request, path string,
 		w.Header().Set(HeaderStreamSSEDataEncoding, "base64")
 	}
 
-	flusher, ok := w.(http.Flusher)
-	if !ok {
-		return newHTTPError(http.StatusInternalServerError, "streaming not supported")
-	}
+	// Caddy >= 2.11 wraps the ResponseWriter and exposes Flush only through Unwrap, so a type
+	// assertion to http.Flusher fails there (every SSE request answered 500). ResponseController
+	// follows Unwrap chains.
+	rc := http.NewResponseController(w)
 
 	w.WriteHeader(http.StatusOK)
-	flusher.Flush()
+	if err := rc.Flush(); err != nil {
+		return newHTTPError(http.StatusInternalServerError, "streaming not supported")
+	}
+	flusher := responseFlusher{rc}
 
 	ctx := r.Context()
 	reconnectTimer := time.NewTimer(time.Duration(h.SSEReconnectInterval))
@@ -1109,3 +1112,8 @@ func parseSubOffset(s string) (uint64, error) {
 	}
 	return v, nil
 }
+
+// responseFlusher adapts an http.ResponseController to the Flush() calls of the SSE loop.
+type responseFlusher struct{ rc *http.ResponseController }
+
+func (f responseFlusher) Flush() { _ = f.rc.Flush() }
